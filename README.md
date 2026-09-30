@@ -26,3 +26,10 @@ The deliberate trade-off is that it returns `null` for anything it cannot parse 
 - `parseStackFrame(line: string): { functionName: string | null, file: string | null, line: number | null, column: number | null } | null`
 
 Run tests with `node --test`.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
