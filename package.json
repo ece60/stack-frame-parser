@@ -1,6 +1,6 @@
 {
   "name": "stack-frame-parser",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Parses a single V8 stack frame line into its file, line number, column number, and function name fields.",
   "type": "module",
   "main": "src/index.js",
